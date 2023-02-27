@@ -8,12 +8,12 @@ Marque esse projeto com uma estrela 🌟
 <img width=100% src="./initial-template/assets/demo-template-lg.gif">
 
 ## Pre-reqs
-
 - Este projeto foi criado usando Node.js v19.6
+- O ideal é que você use o projeto em ambiente Unix (Linux). Se você estiver no Windows, é recomendado que use o [Windows Subsystem Linux](https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10) pois nas aulas são mostrados comandos Linux que possam não existir no Windows.
 
 ## Running
 
-- Execute `npm ci` para restaurar os pacotes
+- Execute `npm ci` na pasta que contém o arquivo `package.json` para restaurar os pacotes
 - Execute `npm start` e em seguida vá para o seu navegador em [http://localhost:3000](http://localhost:3000) para visualizar a página acima
 
 ## Checklist Features
