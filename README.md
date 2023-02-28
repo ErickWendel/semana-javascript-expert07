@@ -58,7 +58,7 @@ Marque esse projeto com uma estrela 🌟
        -  Firefox => Browser options > Performance > Use hardware acceleration when available
       2. Opção 2: Atualizar driver da placa de vídeo
       - Veja detalhes no [webgl-is-not-supported-on-chrome-firefox](https://www.thewindowsclub.com/webgl-is-not-supported-on-chrome-firefox)
-      3. Opção 3: Trocar de WebGL para CPU Web Assembly
+      3. Opção 3: Trocar de WebGL para CPU (mais lento) ou Web Assembly
         - https://blog.tensorflow.org/2020/03/introducing-webassembly-backend-for-tensorflow-js.html
      - (agradecimentos ao usuario Volpin em nossa comunidade do Discord)
   
