@@ -44,7 +44,7 @@ const worker = await getWorker()
 const camera = await Camera.init()
 const [rootPath] = window.location.href.split('/pages/')
 const factory = {
-  async initalize() {
+  async initialize() {
     return Controller.initialize({
       view: new View(),
       worker,
