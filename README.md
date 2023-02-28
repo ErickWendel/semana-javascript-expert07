@@ -44,8 +44,6 @@ Marque esse projeto com uma estrela 🌟
 
 - Ao completar qualquer um dos desafios, envie no canal **#desafios** da comunidade no **Discord**
 ### FAQ
-- Minha máquina tem pouco processamento disponível, o que fazer?
-  - Subi a imagem em um [GitPod](https://gitpod.io#snapshot/1d9072b3-414e-4a71-b3fc-df52118ac2e5) apontando para o repositorio, você será capaz de executar os exemplos por lá
 - browser-sync está lançando erros no Windows e nunca inicializa:
   - Solução: Trocar o browser-sync pelo http-server.
     1. instale o **http-server**  com `npm i -D http-server`
