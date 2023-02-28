@@ -5,7 +5,7 @@ Seja bem vindo(a) à sétima Semana Javascript Expert. Este é o código inicial
 Marque esse projeto com uma estrela 🌟
 
 ## Preview
-<img width=100% src="./initial-template/assets/demo-template-lg.gif">
+<img width=100% src="initial-template/class01/assets/demo-template-lg.gif">
 
 ## Pre-reqs
 - Este projeto foi criado usando Node.js v19.6
@@ -18,7 +18,7 @@ Marque esse projeto com uma estrela 🌟
 
 ## Checklist Features
 - Titles List
-  - [] - Campo para pesquisa não deve travar ao digitar termo de pesquisa
+  - [x] - Campo para pesquisa não deve travar ao digitar termo de pesquisa
   - [] - Deve desenhar mãos na tela e fazer com que elementos em segundo plano  continuem sendo clicáveis  🙌
   - [] - Deve disparar scroll up quando usar a palma das mãos abertas 🖐
   - [] - Deve disparar scroll down quando usar a palma das mãos fechadas ✊
@@ -26,8 +26,8 @@ Marque esse projeto com uma estrela 🌟
   - [] - Ao mover elementos na tela, deve disparar evento **:hover** em elementos em contexto
 
 - Video Player
-  - [] - Deve ser possivel de reproduzir ou pausar videos com o piscar de olhos 😁
-  - [] - Todo processamento de Machine Learning deve ser feito via Web worker
+  - [x] - Deve ser possivel de reproduzir ou pausar videos com o piscar de olhos 😁
+  - [x] - Todo processamento de Machine Learning deve ser feito via Web worker
 
 ### Desafios
 - [] - Aula 01 - Diferenciar piscada de olhos entre olho direito e esquerdo e atualizar log para mostrar qual olho que piscou.

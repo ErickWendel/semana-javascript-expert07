@@ -22,6 +22,7 @@ export default class Camera {
     const stream = await navigator.mediaDevices.getUserMedia(videoConfig)
     const camera = new Camera()
     camera.video.srcObject = stream
+
     // debug reasons!
     // camera.video.height = 240
     // camera.video.width = 320

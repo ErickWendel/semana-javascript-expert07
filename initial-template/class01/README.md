@@ -5,7 +5,7 @@ Seja bem vindo(a) à sétima Semana Javascript Expert. Este é o código inicial
 Marque esse projeto com uma estrela 🌟
 
 ## Preview
-<img width=100% src="./assets/demo-template-lg.gif">
+<img width=100% src="assets/demo-template-lg.gif">
 
 ## Pre-reqs
 

@@ -14,7 +14,6 @@ export default class View {
     this.#canvasContext.drawImage(video, 0, 0, width, height)
     return this.#canvasContext.getImageData(0, 0, width, height)
   }
-
   togglePlayVideo() {
     if (this.#videoElement.paused) {
       this.#videoElement.play()
