@@ -14,13 +14,13 @@ const service = new Service({
 })
 console.log(`loading tf model`)
 service.loadModel()
-console.log(`loaded tf model`)
+console.log(`tf model loaded`)
 postMessage(`Ready`)
 
-onmessage = ({ data }) => {
-  console.log(`data`, data)
-
+onmessage = async ({ data: video }) => {
+  const blinked = await service.handBlinked(video);
+  if (!blinked) return
   postMessage({
-    response: 'ok',
+    blinked
   })
 }
