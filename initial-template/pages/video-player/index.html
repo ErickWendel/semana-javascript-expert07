@@ -11,12 +11,28 @@
       width: 95%;
       margin: 10px;
     }
+    button {
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: blueviolet;
+      border: none;
+      /* color: black; */
+      border-radius: 8px;
+    }
+
+    .btn_container{
+      margin: 12px;
+    }
   </style>
 </head>
 
 <body>
+  <div class="btn_container">
+    <div><button id="init" type="button" disabled>Initialize blink recognition</button></div>
+    <output id="status"></output>
+  </div>
   <video id="video" src="/assets/video.mp4" controls></video>
-  </script>
+  <script src="./src/index.js" type="module"></script>
 </body>
 
 </html>
