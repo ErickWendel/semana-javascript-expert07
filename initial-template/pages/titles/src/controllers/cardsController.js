@@ -29,7 +29,7 @@ export default class CardsController {
     console.log('activating blocking operation...')
     console.time('blocking-op')
     // blocking function
-    for (let counter = 0; counter < 1e5; counter++) console.log()
+    for (let counter = 0; counter < 1e3; counter++) console.log()
     console.timeEnd('blocking-op')
 
     console.log('blocking operation freed up ...')
