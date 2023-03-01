@@ -5,11 +5,11 @@ import Service from "./service.js"
 import View from "./view.js"
 
 async function getWorker() {
-  // if (supportsWorkerType()) {
-  //   console.log(`initializing esm workers`)
-  //   const worker = new Worker(`./src/worker.js`, { type: 'module' })
-  //   return worker
-  // }
+  if (supportsWorkerType()) {
+    console.log(`initializing esm workers`)
+    const worker = new Worker(`./src/worker.js`, { type: 'module' })
+    return worker
+  }
   console.warn(`Your browser doesn't supports wsm modules webworkers`)
   console.warn(`Importing dependencies`)
   await import("https://unpkg.com/@tensorflow/tfjs-core@2.4.0/dist/tf-core.js")
@@ -25,9 +25,9 @@ async function getWorker() {
 
   const workerMock = {
     async postMessage(video) {
-      const blinked = await service.handBlinked(video);
-      if (!blinked) return
-      workerMock.onmessage({ data: { blinked } })
+      const {leftBlink, rightBlink} = await service.handBlinked(video);
+      if (!leftBlink || !rightBlink) return
+      workerMock.onmessage({ data: { leftBlink, rightBlink } })
     },
     // onmessage vai ser sobrescrito pelo controller
     onmessage(msg) {}
@@ -36,7 +36,7 @@ async function getWorker() {
   console.log(`loading tf model`)
   await service.loadModel()
   console.log(`tf model loaded`)
-  setTimeout(() => worker.onmessage({ data: `READY` }), 500)
+  setTimeout(() => worker.onmessage({ data: `READY` }), 1000)
 
   return workerMock
 }

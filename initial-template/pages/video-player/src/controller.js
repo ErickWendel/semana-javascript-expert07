@@ -28,6 +28,7 @@ export default class Controller {
       const blinked = data.blinked
       this.#blinkCounter += blinked
       console.log({ blinked })
+      this.#view.togglePlayVideo()
     }
     return {
       send (msg) {
