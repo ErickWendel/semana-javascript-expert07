@@ -1,0 +1,17 @@
+index.js 
+    -> apenas inicia tudo
+
+workers
+    -> processos pesados em segundo plano
+
+services
+    -> lógica de negócio e chamadas externas
+
+views
+    -> interação com a DOM (HTML)
+
+controllers
+    -> meio de campo entre services/workers e views
+
+factories
+    -> junta todos os módulos e exporta um objeto para iniciar o fluxo da tela

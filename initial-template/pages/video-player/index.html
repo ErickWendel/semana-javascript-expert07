@@ -11,12 +11,24 @@
       width: 95%;
       margin: 10px;
     }
+    button {
+      margin: 10px;
+    }
+    .button-container{
+      margin-left: 10px;
+    }
   </style>
 </head>
 
 <body>
+  <div class="button-container">
+    <div>
+      <button type="button" disabled id="init">Iniciar reconhecimento facial</button>
+      <output id="status"></output>
+    </div>
+  </div>
   <video id="video" src="/assets/video.mp4" controls></video>
-  </script>
+  <script src="./src/index.js" type="module"></script>
 </body>
 
 </html>
