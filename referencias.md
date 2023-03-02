@@ -44,3 +44,8 @@
 - Indices dos dedos da API do tensorflow: https://github.com/tensorflow/tfjs-models/tree/a345f0c58522af25d80153ec27c6e999e45fdd42/hand-pose-detection#keypoint-diagram
 - elementFromPoint API: https://developer.mozilla.org/en-US/docs/Web/API/Document/elementFromPoint
 
+## Aula04
+- Projeto publicado: https://erickwendel.github.io/semana-javascript-expert07-pre/classes/class04/
+- Pergunta no Stack Overflow: https://stackoverflow.com/a/54212926/4087199
+- PseudoStyler: https://github.com/TSedlar/pseudo-styler
+  
