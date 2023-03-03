@@ -3,7 +3,6 @@ export default class Controller {
   #camera
   #worker
   #blinkCounter = 0
-
   constructor({ view, worker, camera }) {
     this.#view = view
     this.#camera = camera
@@ -27,12 +26,9 @@ export default class Controller {
         ready = true
         return
       }
-
       const blinked = data.blinked
-
       this.#blinkCounter += blinked
       this.#view.togglePlayVideo()
-
       console.log('blinked', blinked)
     }
 
