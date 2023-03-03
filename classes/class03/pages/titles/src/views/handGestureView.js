@@ -1,11 +1,14 @@
+import { extraHorizontalCaptureAreaInPixels } from '../../../../../lib/shared/camera.js'
+
 export default class HandGestureView {
   #handsCanvas = document.querySelector('#hands')
   #canvasContext = this.#handsCanvas.getContext('2d')
   #fingerLookupIndexes
   constructor({ fingerLookupIndexes }) {
-    this.#handsCanvas.width = globalThis.screen.availWidth
+    this.#handsCanvas.width = globalThis.screen.availWidth + extraHorizontalCaptureAreaInPixels
     this.#handsCanvas.height = globalThis.screen.availHeight
     this.#fingerLookupIndexes = fingerLookupIndexes
+    this.#handsCanvas.style.transform = `translate(-${extraHorizontalCaptureAreaInPixels / 2}px)`
   }
 
   clearCanvas() {
@@ -27,11 +30,11 @@ export default class HandGestureView {
       this.#drawFingersAndHoverElements(keypoints)
     }
   }
-  
+
   clickOnElement(x, y) {
     const element = document.elementFromPoint(x, y)
-    if(!element) return;
-    
+    if (!element) return;
+
     const rect = element.getBoundingClientRect()
     const event = new MouseEvent('click', {
       view: window,
@@ -67,7 +70,7 @@ export default class HandGestureView {
       // [0] é a palma da mao (wrist)
       const [{ x, y }] = points
       region.moveTo(x, y)
-      for(const point of points) {
+      for (const point of points) {
         region.lineTo(point.x, point.y)
       }
       this.#canvasContext.stroke(region)
