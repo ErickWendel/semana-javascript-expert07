@@ -1,10 +1,12 @@
+export const extraHorizontalCaptureAreaInPixels = 600
+
 export default class Camera {
   constructor() {
     this.video = document.createElement('video')
   }
 
   static async init() {
-    if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
       throw new Error(
         `Browser API navigator.mediaDevices.getUserMedia not available`
       )
@@ -12,11 +14,12 @@ export default class Camera {
     const videoConfig = {
       audio: false,
       video: {
-        width: globalThis.screen.availWidth,
+        width: globalThis.screen.availWidth + extraHorizontalCaptureAreaInPixels,
         height: globalThis.screen.availHeight,
         frameRate: {
           ideal: 60
-        }
+        },
+        transform: `translate(-${extraHorizontalCaptureAreaInPixels}px)`
       }
     }
     const stream = await navigator.mediaDevices.getUserMedia(videoConfig)

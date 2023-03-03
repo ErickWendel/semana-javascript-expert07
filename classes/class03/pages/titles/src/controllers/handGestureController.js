@@ -1,4 +1,5 @@
-import { prepareRunChecker } from "../../../../lib/shared/util.js"
+import { prepareRunChecker } from '../../../../lib/shared/util.js'
+import { extraHorizontalCaptureAreaInPixels } from '../../../../lib/shared/camera.js'
 
 const { shouldRun: scrollShouldRun } = prepareRunChecker({ timerDelay: 200 })
 const { shouldRun: clickShouldRun } = prepareRunChecker({ timerDelay: 300 })
@@ -46,7 +47,7 @@ export default class HandGestureController {
       for await (const { event, x, y } of this.#service.detectGestures(hands)) {
         if (event === 'click') {
           if (!clickShouldRun()) continue
-          this.#view.clickOnElement(x, y)
+          this.#view.clickOnElement(x - extraHorizontalCaptureAreaInPixels / 2, y)
 
           continue
         }
