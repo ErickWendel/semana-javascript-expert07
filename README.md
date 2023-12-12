@@ -4,6 +4,9 @@ Seja bem vindo(a) à sétima Semana Javascript Expert. Este é o código inicial
 
 Marque esse projeto com uma estrela 🌟
 
+## Live demo
+- Para testar o projeto final [clique aqui](https://erickwendel.github.io/semana-javascript-expert07/classes/class04/)
+  
 ## Preview
 <img width=100% src="./initial-template/assets/demo-template-lg.gif">
 
